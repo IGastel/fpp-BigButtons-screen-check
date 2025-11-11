@@ -1,5 +1,5 @@
 {
-	"repoName": "fpp-BigButtons",
+	"repoName": "fpp-BigButtons-screen-check",
 	"name": "Big Buttons",
 	"author": "Chris Pinkham (CaptainMurdoch)",
 	"description": "This plugin displays multiple big buttons in a grid on a page.  Each button can be individually configured to run a different user script.  The title and color of each button can also be configured.",
