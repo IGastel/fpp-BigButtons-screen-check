@@ -1,4 +1,39 @@
 <?
+// -------------------------------------------------------------
+// Screen detection helpers
+// -------------------------------------------------------------
+function detectScreenType() {
+    $backlightDirs = glob('/sys/class/backlight/*');
+    if (empty($backlightDirs)) {
+        return "none";
+    }
+
+    foreach ($backlightDirs as $dir) {
+        if (strpos($dir, '10-0045') !== false) {
+            return "rpi_dsi";
+        } elseif (strpos($dir, 'rpi_backlight') !== false) {
+            return "rpi_hdmi";
+        }
+    }
+
+    return "unknown";
+}
+
+function isScreenOn() {
+    $dirs = glob('/sys/class/backlight/*');
+    if (empty($dirs)) {
+        return true; // assume ON if nothing to check
+    }
+
+    $file = $dirs[0] . '/bl_power';
+    if (!file_exists($file)) {
+        return true;
+    }
+
+    $val = trim(file_get_contents($file));
+    // 0 = on, 1/4 = off
+    return ($val === "0");
+}
 
 
 function returnIfExists($json, $setting) {
