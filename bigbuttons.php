@@ -16,7 +16,12 @@ var pluginJson;
 
 function sendButtonCommand(tab_i,j)
 {    
-    if (pluginJson[tab_i]["buttons"][j]["command"] == "Browser URL") {
+	// Screen state check added by user fork
+   if (!isScreenOn()) {
+       error_log("BigButtons: Screen is off — skipping sendButtonCommand for tab $tab_i, button $j");
+       return; // do not send the command
+   }
+   if (pluginJson[tab_i]["buttons"][j]["command"] == "Browser URL") {
         var url = pluginJson[tab_i]["buttons"][j]["args"][0];
         window.location.href = url;
     } else {
