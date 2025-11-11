@@ -94,7 +94,7 @@ function SetCurrentTab(i){
     document.title = $('.bb-nav-item[data-tab-index='+i+']').html();
 }
 $(function(){
-    $.get('api/configfile/plugin.fpp-BigButtons.json')
+    $.get('api/configfile/plugin.fpp-BigButtons-screen-check.json')
     .done(function(data) {
         processBigButtonConfig(data);
     })
@@ -104,7 +104,7 @@ $(function(){
 	
     function processBigButtonConfigFail(data) {
         var link = $('<a>', {
-        href: 'plugin.php?_menu=content&plugin=fpp-BigButtons&page=config.php',
+        href: 'plugin.php?_menu=content&plugin=fpp-BigButtons-screen-check&page=config.php',
         text: 'Big Buttons is unconfigured, click me to go to the configuration page'
         });
 	    
