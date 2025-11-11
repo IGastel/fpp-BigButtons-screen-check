@@ -1,7 +1,7 @@
 {
 	"repoName": "fpp-BigButtons-screen-check",
-	"name": "Big Buttons",
-	"author": "Chris Pinkham (CaptainMurdoch)",
+	"name": "Big Buttons with screen check",
+	"author": "Ivo van Gastel",
 	"description": "This plugin displays multiple big buttons in a grid on a page.  Each button can be individually configured to run a different user script.  The title and color of each button can also be configured.",
 	"homeURL": "https://github.com/IGastel/fpp-BigButtons-screen-check",
 	"srcURL": "https://github.com/IGastel/fpp-BigButtons-screen-check.git",
