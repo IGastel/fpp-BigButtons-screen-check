@@ -49,7 +49,7 @@ function returnIfExists($json, $setting) {
 function convertAndGetSettings() {
     global $settings;
         
-    $cfgFile = $settings['configDirectory'] . "/plugin.fpp-BigButtons";
+    $cfgFile = $settings['configDirectory'] . "/plugin.fpp-BigButtons-screen-check";
     if (file_exists($cfgFile)) {
         $pluginSettings = parse_ini_file($cfgFile);
         $json = array();
