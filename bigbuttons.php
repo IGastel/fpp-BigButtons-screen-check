@@ -94,7 +94,7 @@ function SetCurrentTab(i){
     document.title = $('.bb-nav-item[data-tab-index='+i+']').html();
 }
 $(function(){
-    $.get('api/configfile/plugin.fpp-BigButtons-screen-check.json')
+    $.get('api/configfile/plugin.fpp-BigButtons.json')
     .done(function(data) {
         processBigButtonConfig(data);
     })
